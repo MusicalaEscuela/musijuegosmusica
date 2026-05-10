@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <meta
+    name="description"
+    content="MusiJuegos Musicala: videojuegos musicales para estudiantes que quieren practicar ritmo, notas, pentagrama, memoria y oído de una forma divertida."
+  />
+
+  <title>MusiJuegos · Musicala</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Inter:wght@400;500;600;700;800;900&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+
+<body>
+  <div class="app-shell">
+    <header class="hero" aria-label="Inicio de MusiJuegos Musicala">
+      <nav class="topbar" aria-label="Barra superior">
+        <a class="brand" href="#inicio" aria-label="Ir al inicio de MusiJuegos Musicala">
+          <span class="brand__logo-wrap">
+            <img
+              class="brand__logo"
+              src="./logo.png"
+              alt="Logo Musicala"
+              onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';"
+            />
+            <span class="brand__fallback" aria-hidden="true">M</span>
+          </span>
+
+          <span>
+            <strong>MusiJuegos</strong>
+            <small>Musicala</small>
+          </span>
+        </a>
+
+        <div class="topbar__actions" aria-label="Acciones rápidas">
+          <a class="topbar__link" href="#catalogo">Juegos</a>
+          <a class="topbar__link" href="#misiones">Misiones</a>
+        </div>
+      </nav>
+
+      <section id="inicio" class="hero__content">
+        <div class="hero__copy">
+          <span class="eyebrow">Zona de juego Musicala</span>
+
+          <h1>Elige un juego y entrena tu oído, tu ritmo y tus notas.</h1>
+
+          <p>
+            Aquí encuentras los videojuegos musicales de Musicala para practicar de forma divertida.
+            Puedes jugar en clase, en casa o cuando quieras retarte un poquito más.
+          </p>
+
+          <div class="hero__buttons">
+            <a class="btn btn--primary" href="#catalogo">Ver juegos</a>
+            <button class="btn btn--soft" type="button" id="randomGameButton">
+              Dame un reto sorpresa
+            </button>
+          </div>
+        </div>
+
+        <aside class="hero-card" aria-label="Resumen de juegos disponibles">
+          <div class="hero-card__icon" aria-hidden="true">🎮</div>
+
+          <h2 id="totalGames">17 juegos</h2>
+
+          <p>
+            Practica lectura musical, ritmo, memoria, notas, oído y piano jugando.
+          </p>
+
+          <div class="hero-card__mini-grid" aria-label="Habilidades que puedes practicar">
+            <span>🎵 Notas</span>
+            <span>🥁 Ritmo</span>
+            <span>👂 Oído</span>
+            <span>🎹 Piano</span>
+          </div>
+        </aside>
+      </section>
+    </header>
+
+    <main>
+      <section id="misiones" class="section intro-grid" aria-label="Misiones musicales sugeridas">
+        <article class="info-card">
+          <span class="info-card__icon" aria-hidden="true">🚀</span>
+          <h2>Quiero empezar fácil</h2>
+          <p>
+            Escoge juegos de nivel inicial para calentar, explorar y ganar confianza sin sufrir
+            contra el pentagrama como si fuera jefe final.
+          </p>
+        </article>
+
+        <article class="info-card">
+          <span class="info-card__icon" aria-hidden="true">🎼</span>
+          <h2>Quiero leer mejor</h2>
+          <p>
+            Practica líneas, espacios, notas y lectura musical hasta que el pentagrama deje de verse
+            como una reja con punticos raros.
+          </p>
+        </article>
+
+        <article class="info-card">
+          <span class="info-card__icon" aria-hidden="true">🥁</span>
+          <h2>Quiero mejorar mi ritmo</h2>
+          <p>
+            Entrena coordinación, pulso, compases y patrones rítmicos con juegos rápidos y retadores.
+          </p>
+        </article>
+      </section>
+
+      <section class="section student-guide" aria-labelledby="studentGuideTitle">
+        <div class="section-heading">
+          <div>
+            <span class="eyebrow">Antes de jugar</span>
+            <h2 id="studentGuideTitle">¿Cómo eliges tu juego?</h2>
+            <p>
+              No tienes que jugar todo en orden. Escoge según lo que quieras practicar hoy.
+            </p>
+          </div>
+        </div>
+
+        <div class="teacher-grid">
+          <article class="teacher-card">
+            <h3>Si quieres practicar notas</h3>
+            <p>
+              Busca juegos de lectura musical, pentagrama, líneas, espacios o notas. Son buenos para
+              reconocer más rápido dónde vive cada nota.
+            </p>
+          </article>
+
+          <article class="teacher-card">
+            <h3>Si quieres practicar ritmo</h3>
+            <p>
+              Elige juegos de ritmo o compás. Te ayudan a sentir el pulso, coordinar mejor y responder
+              patrones sin entrar en pánico musical.
+            </p>
+          </article>
+
+          <article class="teacher-card">
+            <h3>Si quieres un reto</h3>
+            <p>
+              Usa el filtro de nivel y prueba los juegos marcados como reto. No prometemos piedad,
+              pero sí práctica útil.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section id="catalogo" class="section catalog-section" aria-labelledby="catalogTitle">
+        <div class="section-heading">
+          <div>
+            <span class="eyebrow">Catálogo de juegos</span>
+            <h2 id="catalogTitle">¿Qué quieres jugar hoy?</h2>
+            <p>
+              Busca un juego por nombre, habilidad o palabra clave. También puedes filtrar por lo que
+              quieres practicar.
+            </p>
+          </div>
+
+          <div class="counter-pill" id="resultsCounter" aria-live="polite">
+            0 juegos encontrados
+          </div>
+        </div>
+
+        <div class="toolbar" aria-label="Buscador y filtros de juegos">
+          <label class="search-box" for="searchInput">
+            <span aria-hidden="true">🔎</span>
+            <input
+              id="searchInput"
+              type="search"
+              placeholder="Busca: ritmo, notas, pentagrama, piano..."
+              autocomplete="off"
+            />
+          </label>
+
+          <div class="filters" role="group" aria-label="Filtrar por habilidad musical">
+            <button class="chip is-active" type="button" data-filter="Todos">
+              Todos
+            </button>
+
+            <button class="chip" type="button" data-filter="Lectura musical">
+              Lectura musical
+            </button>
+
+            <button class="chip" type="button" data-filter="Ritmo">
+              Ritmo
+            </button>
+
+            <button class="chip" type="button" data-filter="Memoria">
+              Memoria
+            </button>
+
+            <button class="chip" type="button" data-filter="Exploración instrumental">
+              Instrumentos
+            </button>
+
+            <button class="chip" type="button" data-filter="Cartas">
+              Cartas
+            </button>
+          </div>
+        </div>
+
+        <div class="secondary-filters" aria-label="Filtros secundarios">
+          <label for="levelSelect">
+            Nivel
+            <select id="levelSelect">
+              <option value="Todos">Todos los niveles</option>
+              <option value="Inicial">Inicial</option>
+              <option value="Intermedio">Intermedio</option>
+              <option value="Reto">Reto</option>
+            </select>
+          </label>
+
+          <label for="sortSelect">
+            Ordenar
+            <select id="sortSelect">
+              <option value="recommended">Recomendados primero</option>
+              <option value="az">Nombre A-Z</option>
+              <option value="level">Por nivel</option>
+            </select>
+          </label>
+        </div>
+
+        <div class="games-grid" id="gamesGrid" aria-live="polite"></div>
+
+        <div class="empty-state" id="emptyState" hidden>
+          <div aria-hidden="true">🫠</div>
+          <h3>No encontramos juegos con esos filtros</h3>
+          <p>
+            Prueba con otra palabra, cambia el nivel o vuelve a “Todos”.
+            El buscador no lee mentes todavía, tragedia tecnológica.
+          </p>
+        </div>
+      </section>
+
+      <section class="section final-cta" aria-labelledby="finalCtaTitle">
+        <div class="section-heading">
+          <div>
+            <span class="eyebrow">Reto Musicala</span>
+            <h2 id="finalCtaTitle">Juega, practica y vuelve a intentarlo</h2>
+            <p>
+              Cada juego te ayuda a entrenar una habilidad musical. No se trata de hacerlo perfecto
+              a la primera, se trata de mejorar cada vez que juegas.
+            </p>
+          </div>
+
+          <a class="btn btn--primary" href="#catalogo">
+            Elegir otro juego
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>© Musicala · Aprende música jugando.</p>
+      <button class="footer__top" type="button" id="backToTop">
+        Volver arriba ↑
+      </button>
+    </footer>
+  </div>
+
+  <div class="drawer-backdrop" id="drawerBackdrop" hidden></div>
+
+  <aside
+    class="game-drawer"
+    id="gameDrawer"
+    aria-hidden="true"
+    aria-labelledby="drawerTitle"
+  >
+    <button
+      class="drawer-close"
+      type="button"
+      id="drawerClose"
+      aria-label="Cerrar detalle del juego"
+    >
+      ×
+    </button>
+
+    <div id="drawerContent"></div>
+  </aside>
+
+  <template id="gameCardTemplate">
+    <article class="game-card">
+      <div class="game-card__top">
+        <span class="game-card__icon"></span>
+        <span class="game-card__level"></span>
+      </div>
+
+      <h3></h3>
+
+      <p class="game-card__description"></p>
+
+      <div class="game-card__tags"></div>
+
+      <div class="game-card__actions">
+        <a
+          class="btn btn--primary btn--small"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Jugar
+        </a>
+
+        <button class="btn btn--ghost btn--small" type="button">
+          Ver reto
+        </button>
+      </div>
+    </article>
+  </template>
+
+  <script src="./app.js" type="module"></script>
+</body>
+</html>
